@@ -19,12 +19,26 @@ re.sub('\d+', "WASANUMBER", "stuff and 23, 55, no more")
 It also allows for more complex functions (e.g. a lambda) to be called:
 re.sub('\d+', lambda match_obj: str(int(match_obj.group(0))*2), "stuff and 23, 55, no more")
 'stuff and 46, 110, no more'
+
+In [4]: import pandas as pd
+In [5]: df=pd.DataFrame()
+In [6]: eg(df.resample)
+resample(rule="1D", how="sum")
+rule can have the form '5Min' (minute), '2h' (hour), 'D' (day), '2D' (2 day), 'M' (month)
+Common rules: http://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases
+how can use 'sum', 'mean', 'ohlc', np.max, np.mean
+
+In [7]: eg(df.asfreq)  # How to document something we don't know about
+We don't know anything about 'pandas.core.generic.asfreq'...please Pull Request a new example at: https://github.com/ianozsvald/ipython_example_doc
+
+
+
 ```
 
 ## Examples we have (we need more!)
 
-* re.sub
-* DataFrame's resample
+* `re.sub`
+* DataFrame's `resample`
 
 To add an example - either file a bug against this project or (better) make a Pull Request which updates the `examples` dictionary.
 

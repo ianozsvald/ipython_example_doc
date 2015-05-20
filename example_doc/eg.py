@@ -62,8 +62,9 @@ examples = {
 
 'pandas.core.generic.resample':
 """resample(rule="1D", how="sum")
-rule can have the form 5Min (minute), 2h (hour), 1D (day)
-how can have the form 'sum', 'mean'""",
+rule can have the form '5Min' (minute), '2h' (hour), 'D' (day), '2D' (2 day), 'M' (month)
+Common rules: http://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases
+how can use 'sum', 'mean', 'ohlc', np.max, np.mean""",
 
 're.sub': """sub allows direct substitutions from a pattern match:
 re.sub('\d+', "WASANUMBER", "stuff and 23, 55, no more")
@@ -91,7 +92,7 @@ def eg(mod_or_fn):
     if match:
         print(match)
     else:
-        print("We don't know anything about '{}'...please Pull Request a new example".format(full_name))
+        print("We don't know anything about '{}'...please Pull Request a new example at: https://github.com/ianozsvald/ipython_example_doc".format(full_name))
 
 
 if __name__ == "__main__":
