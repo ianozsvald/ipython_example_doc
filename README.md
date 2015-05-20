@@ -1,6 +1,8 @@
-# ipython_example_doc
-Example usages for common Python modules and functions via IPython
+# Example usages for common Python modules and functions via IPython
 
+Why? I spend a lot of time looking up the same infrequently-used function through StackOverflow, the cause is poor documentation at the command line. This tool aims to identify which examples are needed so we can improve the original function's documentation.
+
+Aims:
 * Provides example usage to show how poorly-document functions can be used
 * Logs a request for an example with a remote site so we can count useful-examples (which could be promoted to the original packages) and the missing examples that we need
 
@@ -29,7 +31,7 @@ To add an example - either file a bug against this project or (better) make a Pu
 Requested examples:
 
 * datetime conversions (notably: how to parse dates (even if using other tools like date-util), how to convert dates)
-* <other stuff you keep repeatedly search for in Google and StackOverflow>
+* Other stuff you keep repeatedly search for in Google and StackOverflow
 
 ## Setup
 
