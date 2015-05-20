@@ -7,7 +7,7 @@ setup(
     long_description="some long desc",
     author='Maintained by Ian Ozsvald',
     author_email='ian@ianozsvald.com',
-    url='https://github.com/ianozsvald/',
+    url='https://github.com/ianozsvald/ipython_example_doc',
     license='',
     packages=['example_doc'],
     #packages = find_packages(),

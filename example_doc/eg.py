@@ -3,7 +3,10 @@
 Usage:
 In[]: from example_doc import eg
 In[]: import re  # a module we're not sure how to use
-In[]: eg(re.sub)  # shows examples of usage"""
+In[]: eg(re.sub)  # shows examples of usage
+
+Project:
+https://github.com/ianozsvald/ipython_example_doc"""
 
 import inspect
 
