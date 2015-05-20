@@ -44,6 +44,8 @@ To add an example - either file a bug against this project or (better) make a Pu
 
 Requested examples:
 
+* `urllib.request.urlopen` has a `timeout` which is not documented (it can be a float...), see my usage in `log_usage`
+* `pandas.tseries.tdi.timedelta_range`
 * any Pandas method with a `how` or `method` where the user is left to guess at the various `how` options
 * datetime conversions (notably: how to parse dates (even if using other tools like date-util), how to convert dates)
 * matplotlib common calls (e.g. use of alpha, custom xticks, rotated text) where an example would save hunting through the existing documentation
@@ -55,3 +57,6 @@ Clone it from https://github.com/ianozsvald/ipython_example_doc and run setup:
 
 ```python setup.py install```
 
+## TODO ?
+
+  * rather than synchronously log the result (log_result), use a thread for async logging
