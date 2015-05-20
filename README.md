@@ -30,7 +30,9 @@ To add an example - either file a bug against this project or (better) make a Pu
 
 Requested examples:
 
+* any Pandas method with a `how` or `method` where the user is left to guess at the various `how` options
 * datetime conversions (notably: how to parse dates (even if using other tools like date-util), how to convert dates)
+* matplotlib common calls (e.g. use of alpha, custom xticks, rotated text) where an example would save hunting through the existing documentation
 * Other stuff you keep repeatedly search for in Google and StackOverflow
 
 ## Setup
