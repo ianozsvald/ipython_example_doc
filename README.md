@@ -19,10 +19,17 @@ re.sub('\d+', lambda match_obj: str(int(match_obj.group(0))*2), "stuff and 23, 5
 'stuff and 46, 110, no more'
 ```
 
-## Examples
+## Examples we have (we need more!)
 
 * re.sub
 * DataFrame's resample
+
+To add an example - either file a bug against this project or (better) make a Pull Request which updates the `examples` dictionary.
+
+Requested examples:
+
+* datetime conversions (notably: how to parse dates (even if using other tools like date-util), how to convert dates)
+* <other stuff you keep repeatedly search for in Google and StackOverflow>
 
 ## Setup
 
