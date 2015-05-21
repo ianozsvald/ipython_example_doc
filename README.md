@@ -49,6 +49,7 @@ Requested examples:
 * any Pandas method with a `how` or `method` where the user is left to guess at the various `how` options
 * datetime conversions (notably: how to parse dates (even if using other tools like date-util), how to convert dates)
 * matplotlib common calls (e.g. use of alpha, custom xticks, rotated text) where an example would save hunting through the existing documentation
+* `imp.reload` is deprecated, maybe direct folk to `imp.reload` instead
 * Other stuff you keep repeatedly search for in Google and StackOverflow
 
 ## Setup
@@ -57,6 +58,12 @@ Clone it from https://github.com/ianozsvald/ipython_example_doc and run setup:
 
 ```python setup.py install```
 
+## Tests
+
+``py.test eg.py -s`` (`-s` to show stdout if you want it)
+
 ## TODO ?
 
+  * separate the tests into an external module, make it depend on fewer external tools if possible (e.g. not sqlalchemy)
   * rather than synchronously log the result (log_result), use a thread for async logging
+  * turn into a magic in IPython? Even more cool - make `???` call `eg` so we'd have `re.sub???` to get examples - possibly of help: http://ipython.org/ipython-doc/3/api/generated/IPython.core.magic.html#module-IPython.core.magic http://ipython.org/ipython-doc/3/config/custommagics.html#defining-magics http://ipython.org/ipython-doc/3/interactive/reference.html

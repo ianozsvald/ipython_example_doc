@@ -11,6 +11,7 @@ https://github.com/ianozsvald/ipython_example_doc"""
 import inspect
 from urllib.request import urlopen, URLError
 from socket import timeout
+import unittest
 
 ALLOW_LOGGING = True  # Set to False if urlopen logging is slow for you
 URLOPEN_TIMEOUT = 1.0  # seconds to wait before timing out the logging
@@ -43,12 +44,38 @@ def log_usage(match, success):
 
 
 def _get_full_name(x):
+    full_name = None
     if inspect.ismodule(x):
         full_name = x.__name__
     if inspect.isfunction(x) or inspect.ismethod(x):
         module = inspect.getmodule(x)
         full_name = module.__name__ + "." + x.__name__
+    if not full_name:
+        # sqlalchemy.Engine for example is not a class/function/method/anything
+        # as far as inspect is concerned, so let's make a sensible guess
+        # as fallbacks, just get its type
+        typ = type(x)
+        full_name = typ
     return full_name
+
+
+class Tests(unittest.TestCase):
+    """Some ugly tests to sanity-check that things are working (for now)"""
+    def setUp(self):
+        # disable logging to external site (this feels like ugly config!)
+        global ALLOW_LOGGING
+        ALLOW_LOGGING = False
+
+    def test_eg_on_re(self):
+        import re
+        eg(re)
+        eg(re.sub)
+
+    def test_eg_with_sqlalchemy(self):
+        import sqlalchemy
+        sqlalchemy_connection_string = 'mysql+pymysql://root:@localhost/'
+        engine = sqlalchemy.create_engine(sqlalchemy_connection_string, echo=False)
+        eg(engine)  # '<class 'sqlalchemy.engine.base.Engine'>'
 
 
 # NOTE deliberate violation of PEP8 with the left formatting, I expect to break
@@ -96,6 +123,8 @@ def eg(mod_or_fn=None):
         print(match)
         log_usage(full_name, success=True)
     else:
+        if full_name is None:
+            full_name = "Unknown thing:" + repr(mod_or_fn) + " of type: " + str(type(mod_or_fn))
         print("We don't know anything about '{}'...please Pull Request a new example at: https://github.com/ianozsvald/ipython_example_doc".format(full_name))
         log_usage(full_name, success=False)
 
