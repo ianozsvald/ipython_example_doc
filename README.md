@@ -67,3 +67,4 @@ Clone it from https://github.com/ianozsvald/ipython_example_doc and run setup:
   * separate the tests into an external module, make it depend on fewer external tools if possible (e.g. not sqlalchemy)
   * rather than synchronously log the result (log_result), use a thread for async logging
   * turn into a magic in IPython? Even more cool - make `???` call `eg` so we'd have `re.sub???` to get examples - possibly of help: http://ipython.org/ipython-doc/3/api/generated/IPython.core.magic.html#module-IPython.core.magic http://ipython.org/ipython-doc/3/config/custommagics.html#defining-magics http://ipython.org/ipython-doc/3/interactive/reference.html
+  * Note to self - logs are in <remote>/logs/apache/access_ianozsvald.log.*, grep for `ipython_example_doc`
