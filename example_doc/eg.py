@@ -86,6 +86,11 @@ examples = {
 
 #'pandas.from_csv': 'WE NEED THIS',
 
+'pandas.tseries.index.date_range':
+"""Build a date range between two dates using datetime: pandas.date_range(datetime.datetime(2015,1,1), datetime.datetime(2015,3,1))
+Use `freq` to specify frequency e.g. monthly: date_range(datetime.datetime(2015,1,1), datetime.datetime(2015,6,1), freq="M")
+""",
+
 'pandas.core.generic.resample':
 """resample(rule="1D", how="sum")
 rule can have the form '5Min' (minute), '2h' (hour), 'D' (day), '2D' (2 day), 'M' (month)
