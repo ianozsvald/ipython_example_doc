@@ -9,7 +9,7 @@ Aims:
 ## Usage
 
 ```
-In [1]: from example_doc.eg import eg
+In [1]: from example_doc.example_doc import eg
 In [2]: import re  # a module we're not sure how to use
 In [3]: eg(re.sub)
 sub allows direct substitutions from a pattern match:
