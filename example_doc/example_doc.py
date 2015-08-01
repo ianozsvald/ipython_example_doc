@@ -95,7 +95,7 @@ Use `freq` to specify frequency e.g. monthly: date_range(datetime.datetime(2015,
 """resample(rule="1D", how="sum")
 rule can have the form '5Min' (minute), '2h' (hour), 'D' (day), '2D' (2 day), 'M' (month)
 Common rules: http://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases
-how can use 'sum', 'mean', 'ohlc', np.max, np.mean""",
+how can use 'sum', 'mean', 'median', 'ohlc', np.max, np.mean""",
 
 're.sub': """sub allows direct substitutions from a pattern match:
 re.sub('\d+', "WASANUMBER", "stuff and 23, 55, no more")
